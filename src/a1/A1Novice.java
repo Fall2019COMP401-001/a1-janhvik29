@@ -23,7 +23,7 @@ public class A1Novice {
 				double price = scan.nextDouble();
 				total += quantity * price;
 			}
-			System.out.println(first.charAt(0) + ". " + last + ": " + total);
+			System.out.println(first.charAt(0) + ". " + last + ": " + String.format("%.2f", total));
 		}
 		
 		scan.close();
