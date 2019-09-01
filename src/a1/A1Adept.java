@@ -15,9 +15,9 @@ public class A1Adept {
 		
 		for (int i = 0; i < count; i++) {
 			String item = scan.next();
-			items[items.length] = item;
+			items[i] = item;
 			double price = scan.nextDouble();
-			prices[prices.length] = price;
+			prices[i] = price;
 		}
 		
 		int customers = scan.nextInt();
