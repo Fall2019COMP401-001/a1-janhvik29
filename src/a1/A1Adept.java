@@ -10,8 +10,8 @@ public class A1Adept {
 		Scanner scan = new Scanner(System.in);
 		// Your code follows here.
 		int count = scan.nextInt();
-		String items[] = new String[] {""};
-		double prices[] = new double[] {0};
+		String items[] = new String[] {};
+		double prices[] = new double[] {};
 		
 		for (int i = 0; i < count; i++) {
 			String item = scan.next();
