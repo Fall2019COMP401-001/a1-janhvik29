@@ -55,9 +55,9 @@ public class A1Adept {
 			}
 		}
 		
-		System.out.println("Biggest: " + String.format("%.2f", max) + "(" + big + ")");
-		System.out.println("Smallest: " + String.format("%.2f", min) + "(" + small + ")");
-		System.out.println("Average: " + String.format("%.2f", t/customers));
+		System.out.println("Biggest: " + max + "(" + big + ")");
+		System.out.println("Smallest: " + min + "(" + small + ")");
+		System.out.println("Average: " + t/customers);
 		scan.close();
 	}
 }
