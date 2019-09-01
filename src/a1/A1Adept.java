@@ -10,8 +10,8 @@ public class A1Adept {
 		Scanner scan = new Scanner(System.in);
 		// Your code follows here.
 		int count = scan.nextInt();
-		String items[] = new String[count];
-		double prices[] = new double[count];
+		String items[] = (String[])Array.newInstance(String.class, count);
+		double prices[] = (double[])Array.newInstance(double.class, count);
 		
 		for (int i = 0; i < count; i++) {
 			String item = scan.next();
@@ -37,21 +37,22 @@ public class A1Adept {
 			for (int j = 0; j < c; j++) {
 				int quantity = scan.nextInt();
 				String name = scan.next();
+				t = 0;
 				for (int k = 0; k < items.length; k++) {
+					x = 0;
 					if (items[k] == name) {
 						x += prices[k] * quantity;
 					}
+					t += x;
 				}
-				total += x;
+				total += t;
 			}
-			t += total;
-			if (total >= big) {
+			if (total > big) {
 				big = total;
-				max = first + last;
-			}
-			if (total <= small) {
+				max = first + " " + last;
+			} else if (total < small) {
 				small = total;
-				min = first + last;
+				min = first + " " + last;
 			}
 		}
 		
