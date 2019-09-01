@@ -1,5 +1,6 @@
 package a1;
 
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class A1Adept {
@@ -9,8 +10,8 @@ public class A1Adept {
 		Scanner scan = new Scanner(System.in);
 		// Your code follows here.
 		int count = scan.nextInt();
-		String items[] = new String[] {};
-		double prices[] = new double[] {};
+		String items[] = new String[] {""};
+		double prices[] = new double[] {0};
 		
 		for (int i = 0; i < count; i++) {
 			String item = scan.next();
