@@ -8,7 +8,43 @@ public class A1Jedi {
 		
 		Scanner scan = new Scanner(System.in);
 
-		// Your code follows here.
+		int count = scan.nextInt();
+		String items[] = new String[count];
+		int itemCount[] = new int[count];
+		int bought[] = new int[count];
+		
+		for (int i = 0; i < count; i++) {
+			items[i] = scan.next();
+			double itemPrice = scan.nextDouble();
+		}
+		
+		int customerCount = scan.nextInt();
+		for (int j = 0; j < customerCount; j++) {
+			String first = scan.next();
+			String last = scan.next();
+			int itemsBought = scan.nextInt();
+			
+			for (int k = 0; k < itemsBought; k++) {
+				int quantity = scan.nextInt();
+				String name = scan.next();
+				int r = 0;
+				
+				for (int x = 0; x < items.length; x++) {
+					if (name.equals(items[x])) {
+						r = x;
+					}
+				}
+				
+				bought[r] += quantity;
+			}
+			for (int d = 0; d < count; d++) {
+				if (bought[d] > 0) {
+					System.out.println(itemCount[d] + " customers bought " + bought[d] + " " + items[d]);
+				} else {
+					System.out.println("No customers bought " + items[d]);
+				}
+			}
+		}
 		
 	}
 }
