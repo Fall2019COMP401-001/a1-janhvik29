@@ -38,10 +38,10 @@ public class A1Adept {
 				// Goes through items and prices arrays
 				
 				for (int k = 0; k < count; k++) {
-					if (items[k] == name) {
+					if (name.equals(items[k])) {
 						double oneItemPrice = prices[k];
-						oneItemPrice += oneItemPrice * quantity;
-						customerTotal += oneItemPrice;
+						oneItemPrice = oneItemPrice * quantity;
+						customerTotal = customerTotal + oneItemPrice;
 					
 					}
 				}
@@ -70,9 +70,12 @@ public class A1Adept {
 		}
 		
 		double average = total / customerCount;
+		String maximum = String.format("%, .2f", allTotals[max]);
+		String minimum = String.format("%, .2f", allTotals[min]);
+		String avg = String.format("%, .2f", average);
 		
-		System.out.println("Biggest: " + customerNames[max] + "(" + maxTotal + ")");
-		System.out.println("Smallest: " + customerNames[min] + "(" + minTotal + ")");
+		System.out.println("Biggest: " + customerNames[max] + "(" + maximum + ")");
+		System.out.println("Smallest: " + customerNames[min] + "(" + minimum + ")");
 		System.out.println("Average: " + average);
 		scan.close();
 		
