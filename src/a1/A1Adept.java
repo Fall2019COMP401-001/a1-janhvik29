@@ -63,12 +63,14 @@ public class A1Adept {
 				minTotal = allTotals[i];
 				minName = customerNames[i];
 			}
+		}
 			
 		for (int j = 0; j < allTotals.length; j++) {
 			if (allTotals[j] > maxTotal) {
 				maxTotal = allTotals[j];
 				maxName = customerNames[j];
 			}
+		}
 		
 		for (int k = 0; k < allTotals.length; k++) {
 			all += allTotals[k];
@@ -78,10 +80,9 @@ public class A1Adept {
 		System.out.println("Smallest: " + minName + "(" + minTotal + ")");
 		System.out.println("Average: " + all/customerCount);
 		scan.close();
-		}
 		
-		}
-	}
 }
+}
+
 
 		
