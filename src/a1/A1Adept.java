@@ -70,13 +70,13 @@ public class A1Adept {
 		}
 		
 		double average = total / customerCount;
-		String maximum = String.format("%, .2f", allTotals[max]);
-		String minimum = String.format("%, .2f", allTotals[min]);
-		String avg = String.format("%, .2f", average);
+		String maximum = String.format("%,.2f", allTotals[max]);
+		String minimum = String.format("%,.2f", allTotals[min]);
+		String avg = String.format("%,.2f", average);
 		
 		System.out.println("Biggest: " + customerNames[max] + "(" + maximum + ")");
 		System.out.println("Smallest: " + customerNames[min] + "(" + minimum + ")");
-		System.out.println("Average: " + average);
+		System.out.println("Average: " + avg);
 		scan.close();
 		
 }
