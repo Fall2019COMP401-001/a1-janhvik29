@@ -10,7 +10,7 @@ public class A1Jedi {
 
 		int count = scan.nextInt();
 		String items[] = new String[count];
-		int itemCount[] = new int[count];
+		int custCount[] = new int[count];
 		int bought[] = new int[count];
 		
 		for (int i = 0; i < count; i++) {
@@ -23,7 +23,7 @@ public class A1Jedi {
 			String first = scan.next();
 			String last = scan.next();
 			int itemsBought = scan.nextInt();
-			
+			boolean check[] = new boolean[count];
 			for (int k = 0; k < itemsBought; k++) {
 				int quantity = scan.nextInt();
 				String name = scan.next();
@@ -34,17 +34,22 @@ public class A1Jedi {
 						r = x;
 					}
 				}
-				
+				check[r] = true;
 				bought[r] += quantity;
 			}
+			for (int c = 0; c < count; c++) {
+				if (check[c] == true) {
+					custCount[c] += 1;
+				}
+			}
+		}
 			for (int d = 0; d < count; d++) {
 				if (bought[d] > 0) {
-					System.out.println(itemCount[d] + " customers bought " + bought[d] + " " + items[d]);
+					System.out.println(custCount[d] + " customers bought " + bought[d] + " " + items[d]);
 				} else {
 					System.out.println("No customers bought " + items[d]);
 				}
 			}
-		}
 		
 	}
 }
